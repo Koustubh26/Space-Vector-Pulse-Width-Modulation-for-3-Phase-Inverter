@@ -104,3 +104,15 @@ At the end, we will get the sector number between from 1 to 6 depending on angle
 <img width="1742" height="725" alt="image" src="https://github.com/user-attachments/assets/b7616c88-76a0-4a51-86f2-88164ebd1da5" />
 </p>
 
+* **Time Calculation for Active Vectors**
+
+A two-level inverter has 8 switching states, producing:
+
+6 active vectors; V1 to V6 and
+
+2 zero vectors V0, V7
+
+After identifying the sector in the above step, we can decide which of the active vectors we can use. For each active vector, we need to determine for how that active vector should be applied. It is also called Dwell Time. In this step, we will be calculating the time for these active vectors. 
+
+The equations for calculating the dwell times is given below;
+
