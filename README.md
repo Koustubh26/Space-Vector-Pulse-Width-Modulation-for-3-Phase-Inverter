@@ -152,7 +152,7 @@ At the end, we will get the sector number between from 1 to 6 depending on angle
 
 * **Time Calculation for Active Vectors**
 
-A two-level inverter has 8 switching states, producing:
+As discussed above, a two-level inverter has 8 switching states, producing:
 
 6 active vectors; V1 to V6 and
 
@@ -200,5 +200,46 @@ From the above figure, the reference voltage $\vec{V}_{ref}$ is determined by th
 
 Where T1 and T2 are lead times of the vectors V1 and V2. Since, $\vec{V}_{ref}$, $\vec{V}_1$, $\vec{V}_2$ are constants and V0 = 0, the expression becomes as shown below,
 
-𝑉𝑉̅ref Ts= 𝑉𝑉̅ 1T1 + 𝑉𝑉̅ 2T2
+
+$$
+\vec{V}_{ref} T_s = \vec{V}_1 T_1 + \vec{V}_2 T_2
+$$
+
+
+The above expression tells that we have the vector $\vec{V}_1$ which is applied in the time interval T1, the vector $\vec{V}_2$ which is applied in the time interval T2 and the one of the zero vectors $\vec{V}_0$ or $\vec{V}_7$ in the time interval T0.
+
+___
+
+- **Modulation Strategies**
+
+The vector $\vec{V}_1$, the vector $\vec{V}_2$ and the one of the zero vectors $\vec{V}_0$ or $\vec{V}_7$ can be applied in different orders in a given switching period. This order in which the space vectors are applied is referred to as the modulation strategy or switching sequence. Two popular modulation strategies are;
+
+1) Symmetrical Modulation Strategy
+2) Alternating Zero Vector Modulation Strategy
+
+___
+
+- **Symmetrical Modulation Strategy**
+
+This is also called Center Aligned modulation strategy. An example of generation of the reference vector in sector 1 using symmetrical modulation strategy is graphically depicted in the figure below;
+
+<p align="center">
+<img width="465" height="501" alt="image" src="https://github.com/user-attachments/assets/3802f225-23f6-4894-ab76-478fbc91abe3" />
+</p>
+
+
+As can be seen in the figure above, both the zero vectors are applied during a single switching sequence. One zero vector is applied at the start and end of the switching cycle and the other zero vector $\vec{V}_0'$ ($\vec{V}_7$) is applied during the middle of the switching cycle. The resultant switching sequence comprises of seven time slices.
+
+___
+
+- **Alternating Zero Vector Modulation Strategy**
+
+In this, only one of the two available zero vectors is used during a switching sequence, allowing one switch leg to be clampled to the posititve or negative rail of the DC bus rather than switched. This modulation strategy therefore minimizes the number of switch transitions that occur during a single switching period. An example of generation of the reference vector in sector 1 using this modulation technique is graphically shown in the figure below;
+
+<p align="center">
+<img width="465" height="517" alt="image" src="https://github.com/user-attachments/assets/881b7f43-6af6-4bbc-997b-6bd760a8678b" />
+</p>
+
+___
+
 
